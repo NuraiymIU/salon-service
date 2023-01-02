@@ -16,14 +16,13 @@ public class MasterController {
 
     @PostMapping("/save")
     public MasterDto save(@RequestBody MasterDto masterDto){
-        return masterService.save(masterDto);
+    return masterService.save(masterDto);
     }
 
     @PostMapping("/update")
     public MasterDto update(@RequestBody MasterDto masterDto){
         return masterService.update(masterDto);
     }
-
 
     @GetMapping("/all")
     public List<MasterDto> findAll() {

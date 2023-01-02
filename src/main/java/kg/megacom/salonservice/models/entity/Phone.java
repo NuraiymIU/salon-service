@@ -15,6 +15,8 @@ public class Phone {
     private Long id;
     private String phone;
 
-
+    @ManyToOne
+    @JoinColumn(name = "branch_id")
+    private Branch branch;
 
 }

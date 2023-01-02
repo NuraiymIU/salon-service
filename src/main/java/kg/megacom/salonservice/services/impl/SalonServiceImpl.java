@@ -56,7 +56,5 @@ public class SalonServiceImpl implements SalonService {
 
             salon.setActive(false);
             salonRepo.save(salon);
-
     }
-
 }

@@ -4,12 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+public class MasterDay {
 
-public class PhoneDtoAll {
-
-    private String phone;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
 
 }

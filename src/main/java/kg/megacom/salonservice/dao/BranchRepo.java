@@ -1,6 +1,5 @@
 package kg.megacom.salonservice.dao;
 
-import kg.megacom.salonservice.models.dto.BranchDto;
 import kg.megacom.salonservice.models.entity.Branch;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

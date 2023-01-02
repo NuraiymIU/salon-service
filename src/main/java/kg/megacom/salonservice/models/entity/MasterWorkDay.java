@@ -1,9 +1,12 @@
 package kg.megacom.salonservice.models.entity;
 
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -23,10 +26,14 @@ public class MasterWorkDay {
     @JoinColumn(name = "branch_id")
     private Branch branch;
 
-    private String workDay;
-    private LocalDate startTime;
-    private LocalDate endTime;
+    private LocalDate workDay;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
+
+    @CreationTimestamp
     private LocalDate addDate;
+
+    @UpdateTimestamp
     private LocalDate editDate;
 
     @ManyToOne

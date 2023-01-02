@@ -15,8 +15,11 @@ public class MasterWorkDayController {
     private MasterWorkDayService masterWorkDayService;
 
     @PostMapping("/save")
-    public MasterWorkDayDto save(@RequestBody MasterWorkDayDto masterWorkDayDto){
-        return masterWorkDayService.save(masterWorkDayDto);
+    public MasterWorkDayDto save(@RequestBody MasterWorkDayDto masterWorkDayDto){ return masterWorkDayService.save(masterWorkDayDto); }
+
+    @PostMapping("/update")
+    public MasterWorkDayDto update(@RequestBody MasterWorkDayDto masterWorkDayDto) {
+        return masterWorkDayService.update(masterWorkDayDto);
     }
 
     @GetMapping("/all")

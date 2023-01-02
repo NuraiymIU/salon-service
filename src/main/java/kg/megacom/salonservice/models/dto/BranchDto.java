@@ -13,7 +13,6 @@ public class BranchDto {
     private double lon;
     private boolean active;
     private SalonDto salon;
-
-    List<PhoneDto> phones;
+    private List<PhoneDto> phones;
 
 }

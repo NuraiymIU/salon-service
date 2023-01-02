@@ -2,10 +2,8 @@ package kg.megacom.salonservice.services.impl;
 
 import kg.megacom.salonservice.dao.ClientRepo;
 import kg.megacom.salonservice.exceptions.NotFound;
-import kg.megacom.salonservice.mappers.BranchMapper;
 import kg.megacom.salonservice.mappers.ClientMapper;
 import kg.megacom.salonservice.models.dto.ClientDto;
-import kg.megacom.salonservice.models.entity.Branch;
 import kg.megacom.salonservice.models.entity.Client;
 import kg.megacom.salonservice.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;

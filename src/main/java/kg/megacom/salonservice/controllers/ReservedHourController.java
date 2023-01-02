@@ -3,6 +3,8 @@ package kg.megacom.salonservice.controllers;
 import kg.megacom.salonservice.models.dto.ReservedHourDto;
 import kg.megacom.salonservice.services.ReservedHourService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,8 +17,13 @@ public class ReservedHourController {
     private ReservedHourService reservedHourService;
 
     @PostMapping("/save")
-    public ReservedHourDto save(@RequestBody ReservedHourDto reservedHourDto) {
-        return reservedHourService.save(reservedHourDto);
+    public ResponseEntity<?> save(@RequestBody ReservedHourDto reservedHourDto) {
+        try{
+            return ResponseEntity.ok(reservedHourService.save(reservedHourDto));
+        }
+        catch (Exception e){
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
+        }
     }
 
     @PostMapping("/update")

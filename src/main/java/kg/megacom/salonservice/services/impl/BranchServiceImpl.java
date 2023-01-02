@@ -23,7 +23,6 @@ public class BranchServiceImpl implements BranchService {
 
     @Override
     public BranchDto save(BranchDto branchDto) {
-
         branchDto.setPhones(phoneService.saveAll(branchDto.getPhones()));
         return BranchMapper.INSTANCE.toDto(branchRepo.save(BranchMapper.INSTANCE.toEntity(branchDto)));
     }
